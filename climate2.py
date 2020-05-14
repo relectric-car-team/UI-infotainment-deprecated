@@ -1,4 +1,8 @@
 import pygame
+import home
+import car_info
+import music_player
+import gps
 
 pygame.init()
 climateRun = True
@@ -17,7 +21,7 @@ blue = (0, 0, 255)
 dark_blue = (0, 30, 71)
 pink = (180, 140, 145)
 
-background = pygame.image.load('background1.jpg').convert()
+background = pygame.image.load('homebackground.png').convert()
 
 temp_left = 20
 temp_right = 20
@@ -114,7 +118,6 @@ def add_buttons():
     button("Down", (width / 2) - 300, height / 2 - 80, 75, 75, black, temp_down_left)
     button("Up", (width / 2) + 300, height / 2 - 180, 75, 75, black, temp_up_right)
     button("Down", (width / 2) + 300, height / 2 - 80, 75, 75, black, temp_down_right)
-
     pygame.display.update()
 
 
@@ -136,4 +139,6 @@ def climate():
 
         pygame.display.update()
 
-climate()
+
+if __name__ == "__main__":
+    climate()
